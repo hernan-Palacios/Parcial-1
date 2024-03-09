@@ -16,33 +16,50 @@
         indique si ganó o no el beneficio.*/
 
 
-        float sueldo = 20000;
-        float comision = 0.10;
-
-        float ventasMes;
-        float porcentajeValor1;
-        float porcentajeValor2;
-        float porcentajeValor3;
+        double sueldo = 20000;
+        double comision = 0.10;
+        double ventasMes;
+        double porcentajeValor1;
+        double porcentajeValor2;
+        double porcentajeValor3;
 
 
         Console.WriteLine("Ingrese el valor de la primera venta");
-        float venta1 = float.Parse(Console.ReadLine());
+        double venta1 = double.Parse(Console.ReadLine());
 
         porcentajeValor1 = venta1 * comision;
 
         Console.WriteLine("Ingrese el valor de la segunda venta");
-        float venta2 = float.Parse(Console.ReadLine());
+        double venta2 = double.Parse(Console.ReadLine());
         
         porcentajeValor2 = venta2 * comision;
 
         Console.WriteLine("Ingrese el valor de la tercera venta");
-        float venta3 = float.Parse(Console.ReadLine());
+        double venta3 = double.Parse(Console.ReadLine());
+
+        if (venta1 > venta2)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + venta1);
+        }
+        if (venta2 > venta3)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + venta2);
+        }
+        if (venta3 > venta1)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + venta3);
+        }
 
         porcentajeValor2 = venta3 * comision;
     
         ventasMes = porcentajeValor1+porcentajeValor2+porcentajeValor2;
 
         Console.WriteLine("$Total Ventas mes =" + ventasMes);
+
+        double totalSueldo = ventasMes + sueldo;
+
+        Console.WriteLine("$Tu sueldo en el mes es de = " + totalSueldo);
+
 
 
 
