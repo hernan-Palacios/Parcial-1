@@ -16,6 +16,18 @@
         indique si ganó o no el beneficio.*/
 
 
+        float sueldo = 20000;
+        float comision = 10;
+
+        float venta1;
+        float venta2;
+        float venta4;
+
+
+        
+
+
+
 
     }
 }
