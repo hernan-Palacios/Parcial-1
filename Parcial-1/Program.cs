@@ -19,16 +19,14 @@
         float sueldo = 20000;
         float comision = 10;
 
-        float venta1;
-        float venta2;
-        float venta3;
+       
 
         Console.WriteLine("Ingrese el valor de la primera venta");
-        Console.ReadLine(venta1);
+        float venta1 = float.Parse(Console.ReadLine());
         Console.WriteLine("Ingrese el valor de la segunda venta");
-        Console.ReadLine(venta2);
+        float venta2 = float.Parse(Console.ReadLine());
         Console.WriteLine("Ingrese el valor de la tercera venta");
-        Console.ReadLine(venta3);
+        float venta3 = float.Parse(Console.ReadLine());
 
 
 
