@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Timers;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -16,12 +18,13 @@
         indique si ganó o no el beneficio.*/
 
 
-        double sueldo = 20000;
+        double sueldo = 1000000;
         double comision = 0.10;
         double ventasMes;
         double porcentajeValor1;
         double porcentajeValor2;
         double porcentajeValor3;
+        
 
 
         Console.WriteLine("Ingrese el valor de la primera venta");
@@ -37,20 +40,20 @@
         Console.WriteLine("Ingrese el valor de la tercera venta");
         double venta3 = double.Parse(Console.ReadLine());
 
-        if (venta1 > venta2)
-        {
-            Console.WriteLine("$esta fue la venta de mator comision" + venta1);
-        }
-        if (venta2 > venta3)
-        {
-            Console.WriteLine("$esta fue la venta de mator comision" + venta2);
-        }
-        if (venta3 > venta1)
-        {
-            Console.WriteLine("$esta fue la venta de mator comision" + venta3);
-        }
+        porcentajeValor3 = venta3 * comision;
 
-        porcentajeValor2 = venta3 * comision;
+        if (porcentajeValor1 > porcentajeValor2)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + porcentajeValor1);
+        }
+        if (porcentajeValor2 > porcentajeValor3)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + porcentajeValor2);
+        }
+        if (porcentajeValor3 > porcentajeValor1)
+        {
+            Console.WriteLine("$esta fue la venta de mator comision" + porcentajeValor3);
+        }
     
         ventasMes = porcentajeValor1+porcentajeValor2+porcentajeValor2;
 
@@ -59,6 +62,10 @@
         double totalSueldo = ventasMes + sueldo;
 
         Console.WriteLine("$Tu sueldo en el mes es de = " + totalSueldo);
+
+        double promedioVenta = (porcentajeValor1 + porcentajeValor2 + porcentajeValor3) / 3;
+
+        Console.WriteLine("$El promedio de las ventas realizadas fue = " + promedioVenta);
 
 
 
