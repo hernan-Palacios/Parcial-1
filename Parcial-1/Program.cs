@@ -24,7 +24,7 @@ internal class Program
         double porcentajeValor1;
         double porcentajeValor2;
         double porcentajeValor3;
-        
+
 
 
         Console.WriteLine("Ingrese el valor de la primera venta");
@@ -34,7 +34,7 @@ internal class Program
 
         Console.WriteLine("Ingrese el valor de la segunda venta");
         double venta2 = double.Parse(Console.ReadLine());
-        
+
         porcentajeValor2 = venta2 * comision;
 
         Console.WriteLine("Ingrese el valor de la tercera venta");
@@ -54,8 +54,8 @@ internal class Program
         {
             Console.WriteLine("$esta fue la venta de mator comision" + porcentajeValor3);
         }
-    
-        ventasMes = porcentajeValor1+porcentajeValor2+porcentajeValor2;
+
+        ventasMes = porcentajeValor1 + porcentajeValor2 + porcentajeValor2;
 
         Console.WriteLine("$Total Ventas mes =" + ventasMes);
 
@@ -69,8 +69,13 @@ internal class Program
 
 
 
-
-
-
+        if (ventasMes >= 1000000)
+        {
+            Console.WriteLine("Buena esa te ganaste el bono de 1000000");
+        }
+        else
+        {
+            Console.WriteLine("Hey esfuerzate mas para la proxima");
+        }
     }
 }
