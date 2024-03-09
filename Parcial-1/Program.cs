@@ -17,16 +17,32 @@
 
 
         float sueldo = 20000;
-        float comision = 10;
+        float comision = 0.10;
 
-       
+        float ventasMes;
+        float porcentajeValor1;
+        float porcentajeValor2;
+        float porcentajeValor3;
+
 
         Console.WriteLine("Ingrese el valor de la primera venta");
         float venta1 = float.Parse(Console.ReadLine());
+
+        porcentajeValor1 = venta1 * comision;
+
         Console.WriteLine("Ingrese el valor de la segunda venta");
         float venta2 = float.Parse(Console.ReadLine());
+        
+        porcentajeValor2 = venta2 * comision;
+
         Console.WriteLine("Ingrese el valor de la tercera venta");
         float venta3 = float.Parse(Console.ReadLine());
+
+        porcentajeValor2 = venta3 * comision;
+    
+        ventasMes = porcentajeValor1+porcentajeValor2+porcentajeValor2;
+
+        Console.WriteLine("$Total Ventas mes =" + ventasMes);
 
 
 
